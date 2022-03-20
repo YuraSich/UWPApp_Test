@@ -1,0 +1,92 @@
+﻿<Page
+    x:Class="UWPApp_Test.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPApp_Test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Foreground="#FFF1F1F1" FontSize="48" Loading="Page_Loading" >
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF0D1117"/>
+            <GradientStop Color="#FF161B22" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
+    <Viewbox Stretch="Uniform" Style="{Binding Source={StaticResource ComboBoxRepair}}">
+        <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock  Grid.Column="0" Grid.ColumnSpan="2"
+                    Grid.Row="0" Grid.RowSpan="1"
+                    Margin="50"
+                    Text="Конвертер валют" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Grid Grid.Row="1">
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+          
+                <StackPanel Grid.Row="1" 
+                            Grid.Column="0" 
+                            Margin="40"
+                            VerticalAlignment="Center">
+                    <TextBox    x:Name="LValue" 
+                        Margin="30"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        TextAlignment="Center" KeyUp="LValue_KeyUp"/>
+                    <ComboBox   x:Name="LValute"
+                        Margin="30" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        VerticalContentAlignment="Bottom" 
+                        HorizontalContentAlignment="Center" 
+                        SelectionChanged="LValute_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+                    <TextBlock  x:Name="LValuteName" 
+                        Margin="30"
+                        Grid.Row="2" 
+                        Grid.Column="0" 
+                        FontSize="12" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" Width="150"
+                                TextAlignment="Center">
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="1" 
+                            Grid.Column="1" 
+                            VerticalAlignment="Center" 
+                            Margin="40">
+                    <TextBox    x:Name="RValue" 
+                        Margin="30"
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        TextAlignment="Center" KeyUp="RValue_KeyUp"/>
+                    <ComboBox   x:Name="RValute"
+                        Margin="30"
+                        SelectedIndex="0" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        VerticalContentAlignment="Bottom" 
+                        HorizontalContentAlignment="Center" SelectionChanged="RValute_SelectionChanged"/>
+                    <TextBlock  x:Name="RValuteName" 
+                        Margin="30"
+                        Grid.Row="2" 
+                        Grid.Column="0" 
+                        FontSize="12" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" Width="150"
+                                TextAlignment="Center">
+                    </TextBlock>
+                </StackPanel>
+            
+        </Grid>
+    </Grid>
+    </Viewbox>
+
+</Page>
