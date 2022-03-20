@@ -4,6 +4,7 @@
 Все данные по курсу валют берутся из https://www.cbr-xml-daily.ru/daily_json.js
 
 ### Основное окно
-![image](https://user-images.githubusercontent.com/39992462/159155079-d813ecc4-ac6d-473a-9c0f-77126b3e8d4d.png)
+![image](https://user-images.githubusercontent.com/39992462/159155164-0fa32850-ce3f-4771-b70d-a994da45c234.png)
+
 
 
